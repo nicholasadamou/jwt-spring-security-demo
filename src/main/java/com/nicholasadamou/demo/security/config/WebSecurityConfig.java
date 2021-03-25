@@ -21,9 +21,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.Arrays;
 
-/**
- * Created by pascal on 20/05/16.
- */
 @Configuration
 @EnableWebSecurity
 @EnableAutoConfiguration
