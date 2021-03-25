@@ -66,7 +66,7 @@ If you access the endpoint `http://localhost:8888/me` with a `POST` request (sti
   ],
   "authenticated": true,
   "principal": {
-    "username": "Nicholas",
+    "username": "nicholas",
     "token": "eyJhbGciOiJIUzUxMeJ9.eyJzdwIiOi....m72LpFADA",
     "authorities": [
       {
@@ -81,3 +81,13 @@ If you access the endpoint `http://localhost:8888/me` with a `POST` request (sti
 ```
 
 The 'principal' field in the returned object here is our [AuthenticatedUser](src/main/java/com/nicholasadamou/demo/security/model/AuthenticatedUser.java). If we get want to get more information from our JWT then we can simply add it to this object and fill it in the [JwtAuthenticationProvider](src/main/java/com/nicholasadamou/demo/security/JwtAuthenticationProvider.java).
+
+## References
+
+http://projects.spring.io/spring-boot/
+
+http://projects.spring.io/spring-security/
+
+https://jwt.io/
+
+https://www.toptal.com/java/rest-security-with-jwt-spring-security-and-java
