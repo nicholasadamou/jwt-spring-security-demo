@@ -3,6 +3,10 @@ ARTIFACT_NAME ?= jwt-spring-security-demo
 .PHONY: all
 all: clean-war build
 
+.PHONY: install
+install:
+	mvn clean install
+
 .PHONY: build
 build: target/$(ARTIFACT_NAME).jar
 
@@ -17,4 +21,4 @@ target/$(ARTIFACT_NAME).jar: pom.xml src
 
 .PHONY: clean-war
 clean-war:
-	mvn clean install
+	mvn clean

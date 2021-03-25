@@ -14,19 +14,13 @@ Example project to show how to use JWT in combination with Spring Security to pr
 Install the dependencies:
 
 ```bash
-mvn clean install
+make install
 ```
 
 Build the war file:
 
 ```bash
 make all
-```
-
-Run the war file:
-
-```bash
-make war
 ```
 
 ## Usage
