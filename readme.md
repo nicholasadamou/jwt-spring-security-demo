@@ -41,7 +41,7 @@ You will get an `HTTP 401` error if you try this in your browser.
 
 To get access to the endpoint you will need to supply a JWT token, so you can get through the `JwtAuthenticationFilter`.
 
-To generate a valid token open the sources of the class [JwtTokenGenerator](src/main/java/com/nicholasadamou/demo/security/util/JwtTokenGenerator.java) and run the 'main' method,
+To generate a valid token open the sources of the class [JwtTokenGenerator](src/main/java/com/nicholasadamou/demo/security/util/JwtTokenGenerator.java) and run the 'main' method.
 
 Copy the token and open a tool with which you can send an HTTP request and add the token to the header.
 
