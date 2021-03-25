@@ -84,9 +84,9 @@ The 'principal' field in the returned object here is our [AuthenticatedUser](src
 
 ## References
 
-http://projects.spring.io/spring-boot/
+https://spring.io/projects/spring-boot
 
-http://projects.spring.io/spring-security/
+https://spring.io/projects/spring-security
 
 https://jwt.io/
 
