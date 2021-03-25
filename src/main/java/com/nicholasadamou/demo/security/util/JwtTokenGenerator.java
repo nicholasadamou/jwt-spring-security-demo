@@ -3,7 +3,7 @@ package com.nicholasadamou.demo.security.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import com.nicholasadamou.demo.security.transfer.JwtUserDto;
+import com.nicholasadamou.demo.security.transfer.User;
 
 /**
  * convenience class to generate a token for testing your requests.
@@ -20,7 +20,7 @@ public class JwtTokenGenerator {
      * @param u the user for which the token will be generated
      * @return the JWT token
      */
-    public static String generateToken(JwtUserDto u, String secret) {
+    public static String generateToken(User u, String secret) {
         Claims claims = Jwts.claims().setSubject(u.getUsername());
         claims.put("userId", u.getId() + "");
         claims.put("role", u.getRole());
@@ -36,7 +36,7 @@ public class JwtTokenGenerator {
      */
     public static void main(String[] args) {
 
-        JwtUserDto user = new JwtUserDto();
+        User user = new User();
         user.setId(123L);
         user.setUsername("Pascal");
         user.setRole("admin");

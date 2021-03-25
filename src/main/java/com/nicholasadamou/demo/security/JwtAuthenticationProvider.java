@@ -4,7 +4,7 @@ package com.nicholasadamou.demo.security;
 import com.nicholasadamou.demo.security.exception.JwtTokenMalformedException;
 import com.nicholasadamou.demo.security.model.AuthenticatedUser;
 import com.nicholasadamou.demo.security.model.JwtAuthenticationToken;
-import com.nicholasadamou.demo.security.transfer.JwtUserDto;
+import com.nicholasadamou.demo.security.transfer.User;
 import com.nicholasadamou.demo.security.util.JwtTokenValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -42,7 +42,7 @@ public class JwtAuthenticationProvider extends AbstractUserDetailsAuthentication
         JwtAuthenticationToken jwtAuthenticationToken = (JwtAuthenticationToken) authentication;
         String token = jwtAuthenticationToken.getToken();
 
-        JwtUserDto parsedUser = jwtTokenValidator.parseToken(token);
+        User parsedUser = jwtTokenValidator.parseToken(token);
 
         if (parsedUser == null) {
             throw new JwtTokenMalformedException("JWT token is not valid");

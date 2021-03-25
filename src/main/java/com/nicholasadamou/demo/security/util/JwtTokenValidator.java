@@ -3,7 +3,7 @@ package com.nicholasadamou.demo.security.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
-import com.nicholasadamou.demo.security.transfer.JwtUserDto;
+import com.nicholasadamou.demo.security.transfer.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -27,8 +27,8 @@ public class JwtTokenValidator {
      * @param token the JWT token to parse
      * @return the User object extracted from specified token or null if a token is invalid.
      */
-    public JwtUserDto parseToken(String token) {
-        JwtUserDto u = null;
+    public User parseToken(String token) {
+        User u = null;
 
         try {
             Claims body = Jwts.parser()
@@ -36,7 +36,7 @@ public class JwtTokenValidator {
                     .parseClaimsJws(token)
                     .getBody();
 
-            u = new JwtUserDto();
+            u = new User();
             u.setUsername(body.getSubject());
             u.setId(Long.parseLong((String) body.get("userId")));
             u.setRole((String) body.get("role"));

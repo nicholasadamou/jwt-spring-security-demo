@@ -5,7 +5,7 @@ package com.nicholasadamou.demo.security.transfer;
  *
  * @author Nicholas Adamou
  */
-public class JwtUserDto {
+public class User {
 
     private Long id;
 
