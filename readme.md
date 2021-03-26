@@ -74,7 +74,7 @@ If you access the endpoint `http://localhost:8888/me` with a `POST` request (sti
 }
 ```
 
-The 'principal' field in the returned object here is our [AuthenticatedUser](src/main/java/com/nicholasadamou/demo/security/model/AuthenticatedUser.java). If we get want to get more information from our JWT then we can simply add it to this object and fill it in the [JwtAuthenticationProvider](src/main/java/com/nicholasadamou/demo/security/JwtAuthenticationProvider.java).
+The 'principal' field is the returned object here is our [AuthenticatedUser](src/main/java/com/nicholasadamou/demo/security/model/AuthenticatedUser.java). If we want to get more information from our JWT then we can simply add it to this object and fill it in the [JwtAuthenticationProvider](src/main/java/com/nicholasadamou/demo/security/JwtAuthenticationProvider.java).
 
 ## References
 
