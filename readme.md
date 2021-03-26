@@ -1,6 +1,6 @@
 # SpringBoot JWT Security Demo
 
-Example project to show how to use JWT in combination with Spring Security to protect REST API endpointd.
+Example project to show how to use JWT in combination with Spring Security to protect REST API endpoints.
 
 ## Development
 
