@@ -28,7 +28,7 @@ public class JwtTokenValidator {
      * @return the User object extracted from specified token or null if a token is invalid.
      */
     public User parseToken(String token) {
-        User u = null;
+        User user = null;
 
         try {
             Claims body = Jwts.parser()
@@ -36,15 +36,15 @@ public class JwtTokenValidator {
                     .parseClaimsJws(token)
                     .getBody();
 
-            u = new User();
-            u.setUsername(body.getSubject());
-            u.setId(Long.parseLong((String) body.get("userId")));
-            u.setRole((String) body.get("role"));
+            user = new User();
+            user.setUsername(body.getSubject());
+            user.setId(Long.parseLong((String) body.get("userId")));
+            user.setRole((String) body.get("role"));
 
         } catch (JwtException e) {
             // Simply print the exception and null will be returned for the userDto
             e.printStackTrace();
         }
-        return u;
+        return user;
     }
 }
