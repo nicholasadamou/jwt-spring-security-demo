@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class JwtAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
-        // Do do anything specific here
+        // Don't do anything specific here
     }
 
 }
