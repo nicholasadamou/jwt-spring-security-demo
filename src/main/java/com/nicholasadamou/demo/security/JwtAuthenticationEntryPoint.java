@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * Since our API only 'speaks' REST we give a HTTP 401 if user cannot be authenticated. There is no
- * login page top redirect to.
+ * login page to redirect to.
  *
  * @author Nicholas Adamou
  */
